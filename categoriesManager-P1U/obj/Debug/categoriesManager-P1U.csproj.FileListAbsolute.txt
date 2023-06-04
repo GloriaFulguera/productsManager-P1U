@@ -3,9 +3,9 @@ C:\Users\Glorupc\source\repos\categoriesManager-P1U\categoriesManager-P1U\bin\De
 C:\Users\Glorupc\source\repos\categoriesManager-P1U\categoriesManager-P1U\bin\Debug\categoriesManager-P1U.pdb
 C:\Users\Glorupc\source\repos\categoriesManager-P1U\categoriesManager-P1U\obj\Debug\categoriesManager-P1U.csproj.AssemblyReference.cache
 C:\Users\Glorupc\source\repos\categoriesManager-P1U\categoriesManager-P1U\obj\Debug\categoriesManager-P1U.csproj.SuggestedBindingRedirects.cache
-C:\Users\Glorupc\source\repos\categoriesManager-P1U\categoriesManager-P1U\obj\Debug\categoriesManager_P1U.Form1.resources
 C:\Users\Glorupc\source\repos\categoriesManager-P1U\categoriesManager-P1U\obj\Debug\categoriesManager_P1U.Properties.Resources.resources
 C:\Users\Glorupc\source\repos\categoriesManager-P1U\categoriesManager-P1U\obj\Debug\categoriesManager-P1U.csproj.GenerateResource.cache
 C:\Users\Glorupc\source\repos\categoriesManager-P1U\categoriesManager-P1U\obj\Debug\categoriesManager-P1U.csproj.CoreCompileInputs.cache
 C:\Users\Glorupc\source\repos\categoriesManager-P1U\categoriesManager-P1U\obj\Debug\categoriesManager-P1U.exe
 C:\Users\Glorupc\source\repos\categoriesManager-P1U\categoriesManager-P1U\obj\Debug\categoriesManager-P1U.pdb
+C:\Users\Glorupc\source\repos\categoriesManager-P1U\categoriesManager-P1U\obj\Debug\categoriesManager_P1U.Principal.resources
