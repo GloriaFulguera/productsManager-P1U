@@ -58,8 +58,13 @@ namespace categoriesManager_P1U
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            //DialogResult res= MessageBox.Show(MessageBoxButtons.YesNo);
-            lsbInformacion.Items.Remove(lsbInformacion.SelectedItem);
+            if (MessageBox.Show("¿Seguro que desea eliminar el producto?", "Confirmar", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                lsbInformacion.Items.Remove(lsbInformacion.SelectedItem);
+            }
+
+            //Messaje
+            //MessageBox.Show("Seguro?", "confirmar", MessageBoxButtons.YesNo);
         }
     }
 }
