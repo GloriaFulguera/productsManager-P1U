@@ -21,7 +21,7 @@ namespace categoriesManager_P1U
         {
             grbBotones.Enabled= false;
             grbManager.Enabled = true;
-
+            lsbInformacion.Enabled= false;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -33,6 +33,7 @@ namespace categoriesManager_P1U
 
             lblMensajes.Text = "";
             lblMensajes.Visible= false;
+            lsbInformacion.Enabled = true;
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
@@ -65,6 +66,11 @@ namespace categoriesManager_P1U
 
             //Messaje
             //MessageBox.Show("Seguro?", "confirmar", MessageBoxButtons.YesNo);
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
