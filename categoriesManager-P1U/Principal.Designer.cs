@@ -215,6 +215,7 @@
             this.btnActualizar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnActualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnNuevo
             // 
@@ -244,6 +245,7 @@
             this.lsbInformacion.Name = "lsbInformacion";
             this.lsbInformacion.Size = new System.Drawing.Size(333, 212);
             this.lsbInformacion.TabIndex = 13;
+            this.lsbInformacion.Click += new System.EventHandler(this.lsbInformacion_Click);
             // 
             // lblMensajes
             // 

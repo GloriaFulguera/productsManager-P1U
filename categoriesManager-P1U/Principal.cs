@@ -17,11 +17,16 @@ namespace categoriesManager_P1U
             InitializeComponent();
         }
 
+        int estadoGuardar = 0;
+
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            grbBotones.Enabled= false;
+            estadoGuardar = 1;
+            grbBotones.Enabled = false;
             grbManager.Enabled = true;
-            lsbInformacion.Enabled= false;
+            txbCodigo.Text = "";
+            txbDescripcion.Text = "";
+            lsbInformacion.Enabled = false;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -32,7 +37,7 @@ namespace categoriesManager_P1U
             txbDescripcion.Text = "";
 
             lblMensajes.Text = "";
-            lblMensajes.Visible= false;
+            lblMensajes.Visible = false;
             lsbInformacion.Enabled = true;
         }
 
@@ -42,13 +47,30 @@ namespace categoriesManager_P1U
             if (txbCodigo.Text != "" && txbDescripcion.Text != "")
             {
                 item += txbCodigo.Text + "    " + txbDescripcion.Text;
-                lsbInformacion.Items.Add(item);
-                lblMensajes.Text = "";
-                lblMensajes.Visible = false;
-                txbCodigo.Text = "";
-                txbDescripcion.Text = "";
+                if (estadoGuardar == 1)
+                {
+                    lsbInformacion.Items.Add(item);
+                    lblMensajes.Text = "";
+                    lblMensajes.Visible = false;
+                    txbCodigo.Text = "";
+                    txbDescripcion.Text = "";
+                }
+                else
+                {
+                    int elemento = lsbInformacion.SelectedIndex;
 
-                MessageBox.Show("Producto agregado correctamente.");
+                    if(elemento != -1)
+                    {
+                        lsbInformacion.Items.Remove(lsbInformacion.Items[elemento]);
+                        lsbInformacion.Items.Insert(elemento, item);
+                    }
+                    /* (yo hice lo de arriba) el tuto decia:
+                     * lsbInformacion.Items.Remove(lsbInformacion.SelectedItem);
+                     * lsbInformacion.Items.Insert(elemento, item);
+                     */
+                }
+
+                //MessageBox.Show("Producto agregado correctamente.");
             }
             else
             {
@@ -72,5 +94,25 @@ namespace categoriesManager_P1U
         {
             Application.Exit();
         }
+
+        private void lsbInformacion_Click(object sender, EventArgs e)
+        {
+            string item;
+            if (lsbInformacion.SelectedItem != null)
+            {
+                item = lsbInformacion.SelectedItem.ToString();
+                txbCodigo.Text = item.Substring(0, 3).Trim();
+                txbDescripcion.Text = item.Substring(3).Trim();
+            }
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            estadoGuardar = 2;
+            grbBotones.Enabled = false;
+            grbManager.Enabled = true;
+
+        }
+
     }
 }
